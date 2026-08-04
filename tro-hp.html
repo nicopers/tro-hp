@@ -293,7 +293,8 @@
   #service.in .os-steps .os-step:nth-child(2),#service.in .os-cards .os-card:nth-child(2){transition-delay:.1s}
   #service.in .os-steps .os-step:nth-child(3),#service.in .os-cards .os-card:nth-child(3){transition-delay:.2s}
   #service.in .os-steps .os-step:nth-child(4),#service.in .os-cards .os-card:nth-child(4){transition-delay:.3s}
-  .os-bar{display:grid;grid-template-columns:1fr auto 1fr;gap:36px;align-items:center;margin-top:48px;padding:26px 32px;background:var(--paper);border:1px solid var(--line);border-radius:4px}
+  .os-bar{width:100vw;margin-left:calc(50% - 50vw);margin-top:52px;padding:30px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .os-bar-in{max-width:1320px;margin:0 auto;padding:0 6vw;display:grid;grid-template-columns:1fr auto 1fr;gap:36px;align-items:center}
   .os-bar-l{font-family:"Noto Sans JP",sans-serif;font-size:15px;letter-spacing:.02em;color:var(--ink);font-weight:600;padding-left:18px;border-left:2px solid var(--sand)}
   .os-bar-btn{justify-self:center;border:1px solid var(--ink);padding:15px 36px;font-family:"Noto Sans JP",sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--ink);white-space:nowrap;transition:.3s;border-radius:2px}
   .os-bar-btn:hover{background:var(--ink);color:var(--cream)}
@@ -308,7 +309,7 @@
     .os-steps::before{display:none}.os-node{display:none}
     .os-en{margin-top:16px}
     .os-cards{grid-template-columns:repeat(2,1fr);gap:12px}
-    .os-bar{grid-template-columns:1fr;gap:18px;text-align:center}
+    .os-bar-in{grid-template-columns:1fr;gap:18px;text-align:center}
     .os-bar-l{border-left:none;padding-left:0;text-align:center}
     .os-bar-r{text-align:center}
   }
@@ -575,9 +576,11 @@ SERVICE</span>
       </article>
     </div>
     <div class="os-bar">
-      <p class="os-bar-l">設計・デザインのご相談はグループ会社「ニコパース」へ</p>
-      <a class="os-bar-btn" href="https://nicomade.net" target="_blank" rel="noopener">nicomadeを見る <span class="ar">→</span></a>
-      <p class="os-bar-r">CGパース制作・内装デザイン・設計のご相談は<br>デザイン設計ブランド「ニコパース」にて承っております。</p>
+      <div class="os-bar-in">
+        <p class="os-bar-l">設計・デザインのご相談はグループ会社「ニコパース」へ</p>
+        <a class="os-bar-btn" href="https://nicomade.net" target="_blank" rel="noopener">nicomadeを見る <span class="ar">→</span></a>
+        <p class="os-bar-r">CGパース制作・内装デザイン・設計のご相談は<br>デザイン設計ブランド「ニコパース」にて承っております。</p>
+      </div>
     </div>
   </div>
 </section>
