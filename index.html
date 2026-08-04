@@ -225,7 +225,7 @@
     .intro{display:none}.intro-logo{opacity:1;transform:none;animation:none}.intro-line{width:132px;animation:none}
     .line-dl::after{display:none}
     .cta-band::before{transition:none!important;transform:none!important}.cta-inner{opacity:1!important;transform:none!important;transition:none}
-    .cards .card,.work-grid .work,.flow > *{opacity:1!important;transform:none!important;transition:none}
+    .cards .card,.work-grid .work,.flow > *,.os-steps .os-step,.os-cards .os-card{opacity:1!important;transform:none!important;transition:none}
     .card::before{transition:none!important}#service.in .cards .card:hover,#service.in .cards .card:hover::before{transform:none!important;box-shadow:none!important}
     .p-rule{width:30px!important;transition:none}}
 
@@ -262,19 +262,60 @@
   .card p{font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:1.9;color:rgba(255,255,255,.85)}
   .card .rule{width:34px;height:1px;background:rgba(255,255,255,.6);margin-top:18px;transition:width .35s}
   .card:hover .rule{width:60px}
-  /* one-stop lead + pipeline */
-  .onestop-lead{font-family:"Noto Sans JP",sans-serif;font-size:14.5px;line-height:2;letter-spacing:.03em;color:var(--ink-soft);margin-top:16px;max-width:660px}
-  .onestop-lead b{color:var(--ink);font-weight:600}
-  .pipeline{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;gap:8px;margin:36px 0 6px;padding:30px 22px;background:var(--paper);border:1px solid var(--line);border-radius:4px}
-  .pstage{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;flex:1 1 130px;min-width:112px;padding:2px 6px}
-  .pstage .pen{font-family:"Cormorant Garamond",Georgia,serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);margin-bottom:9px}
-  .pstage .pjp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:17px;font-weight:600;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
-  .pstage .pnote{font-family:"Noto Sans JP",sans-serif;font-size:10.5px;letter-spacing:.02em;color:var(--mute);margin-top:8px;line-height:1.5}
-  .parrow{align-self:center;color:var(--sand);font-size:15px;flex:0 0 auto}
-  @media (max-width:640px){
-    .pipeline{flex-direction:column;align-items:stretch;gap:0;padding:24px 20px}
-    .pstage{flex:none;padding:13px 0}
-    .parrow{transform:rotate(90deg);margin:2px auto}
+  /* ===== ONE-STOP SERVICE (redesign) ===== */
+  #service.onestop{position:relative;overflow:hidden}
+  .os-wm{position:absolute;top:-18px;left:-6px;z-index:0;pointer-events:none;white-space:pre-line;
+    font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:166px;line-height:.9;letter-spacing:.01em;text-transform:uppercase;color:#e8e1d4}
+  #service .sec-inner{position:relative;z-index:1}
+  .os-top{display:grid;grid-template-columns:0.92fr 1.45fr;gap:64px;align-items:start;padding-top:18px}
+  .os-head .kicker{margin-bottom:18px}
+  .os-head h2.jp{line-height:1.26}
+  .os-lead{font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:2.05;letter-spacing:.02em;color:var(--ink-soft);margin-top:26px;max-width:440px}
+  .os-steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding-top:6px}
+  .os-steps::before{content:"";position:absolute;left:2px;right:2px;top:58px;height:1px;background:var(--line);z-index:0}
+  .os-step{position:relative;z-index:1}
+  .os-num{font-family:"Cormorant Garamond",Georgia,serif;font-size:40px;line-height:1;color:var(--sand)}
+  .os-node{position:absolute;top:53px;left:1px;width:9px;height:9px;border-radius:50%;background:var(--sand);box-shadow:0 0 0 5px var(--ground)}
+  .os-en{font-family:"Cormorant Garamond",Georgia,serif;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);margin-top:34px;margin-bottom:11px}
+  .os-jp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:18px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin-bottom:13px;white-space:nowrap}
+  .os-desc{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;line-height:1.95;letter-spacing:.01em;color:var(--ink-soft)}
+  .os-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:54px}
+  .os-card{position:relative;aspect-ratio:3/3.9;overflow:hidden;border-radius:3px;color:#fff;display:flex;align-items:flex-end}
+  .os-card::before{content:"";position:absolute;inset:0;z-index:0;background-image:var(--cimg);background-size:cover;background-position:var(--cpos,center);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .os-card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.12) 42%,rgba(0,0,0,.82) 100%)}
+  #service.in .os-card:hover::before{transform:scale(1.06)}
+  .os-cov{position:relative;z-index:2;padding:0 26px 30px}
+  .os-cnum{font-family:"Cormorant Garamond",Georgia,serif;font-size:34px;line-height:1;color:#fff}
+  .os-cjp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:19px;font-weight:600;letter-spacing:.04em;margin:12px 0 7px}
+  .os-cen{font-family:"Cormorant Garamond",Georgia,serif;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+  .os-steps .os-step,.os-cards .os-card{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  #service.in .os-steps .os-step,#service.in .os-cards .os-card{opacity:1;transform:none}
+  #service.in .os-steps .os-step:nth-child(2),#service.in .os-cards .os-card:nth-child(2){transition-delay:.1s}
+  #service.in .os-steps .os-step:nth-child(3),#service.in .os-cards .os-card:nth-child(3){transition-delay:.2s}
+  #service.in .os-steps .os-step:nth-child(4),#service.in .os-cards .os-card:nth-child(4){transition-delay:.3s}
+  .os-bar{display:grid;grid-template-columns:1fr auto 1fr;gap:36px;align-items:center;margin-top:48px;padding:26px 32px;background:var(--paper);border:1px solid var(--line);border-radius:4px}
+  .os-bar-l{font-family:"Noto Sans JP",sans-serif;font-size:15px;letter-spacing:.02em;color:var(--ink);font-weight:600;padding-left:18px;border-left:2px solid var(--sand)}
+  .os-bar-btn{justify-self:center;border:1px solid var(--ink);padding:15px 36px;font-family:"Noto Sans JP",sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--ink);white-space:nowrap;transition:.3s;border-radius:2px}
+  .os-bar-btn:hover{background:var(--ink);color:var(--cream)}
+  .os-bar-btn .ar{color:var(--sand);margin-left:12px;display:inline-block;transition:.3s}
+  .os-bar-btn:hover .ar{color:var(--cream);transform:translateX(4px)}
+  .os-bar-r{font-family:"Noto Sans JP",sans-serif;font-size:12px;line-height:1.85;letter-spacing:.01em;color:var(--ink-soft);text-align:right}
+  @media (max-width:980px){
+    .os-wm{font-size:100px}
+    .os-top{grid-template-columns:1fr;gap:36px}
+    .os-lead{max-width:none}
+    .os-steps{grid-template-columns:repeat(2,1fr);gap:34px 30px}
+    .os-steps::before{display:none}.os-node{display:none}
+    .os-en{margin-top:16px}
+    .os-cards{grid-template-columns:repeat(2,1fr);gap:12px}
+    .os-bar{grid-template-columns:1fr;gap:18px;text-align:center}
+    .os-bar-l{border-left:none;padding-left:0;text-align:center}
+    .os-bar-r{text-align:center}
+  }
+  @media (max-width:460px){
+    .os-wm{font-size:72px}
+    .os-cards{grid-template-columns:1fr}
+    .os-jp{white-space:normal}
   }
   /* works capability tag */
   .work{text-align:center}
@@ -465,66 +506,78 @@
 </section>
 
 <!-- ===== SERVICE CARDS ===== -->
-<section class="sec reveal" id="service" style="padding-top:34px;padding-bottom:24px">
+<section class="sec reveal onestop" id="service" style="padding-top:44px;padding-bottom:34px">
+  <span class="os-wm" aria-hidden="true">ONE
+STOP
+SERVICE</span>
   <div class="sec-inner">
-    <div class="head-row">
-      <div>
+    <div class="os-top">
+      <div class="os-head">
         <p class="kicker">One-Stop Service</p>
-        <h2 class="jp">デザインから、組み立て・設置まで。</h2>
+        <h2 class="jp">デザインから、<br>組み立て・設置まで。</h2>
+        <p class="os-lead">デザイン・設計から内装工事・造作家具・運送組立設置まで、すべてをワンストップでご提供。一社完結だからこそ実現できる、品質・スピード・コストの最適化。複数業者を手配・調整する手間なく、理想の空間を確実にカタチにします。</p>
+      </div>
+      <div class="os-steps">
+        <div class="os-step">
+          <div class="os-num">01</div><span class="os-node"></span>
+          <div class="os-en">Design</div>
+          <div class="os-jp">デザイン・設計</div>
+          <p class="os-desc">nicomade（グループ）と連携し、空間のコンセプトを提案。CGパースや図面でイメージを可視化します。</p>
+        </div>
+        <div class="os-step">
+          <div class="os-num">02</div><span class="os-node"></span>
+          <div class="os-en">Interior</div>
+          <div class="os-jp">内装工事</div>
+          <p class="os-desc">経験豊富な職人による高品質な内装施工。細部までこだわり、美しく仕上げます。</p>
+        </div>
+        <div class="os-step">
+          <div class="os-num">03</div><span class="os-node"></span>
+          <div class="os-en">Furniture</div>
+          <div class="os-jp">造作家具製造</div>
+          <p class="os-desc">空間に合わせた造作家具を設計・製作。素材・仕上げまでトータルでご提案します。</p>
+        </div>
+        <div class="os-step">
+          <div class="os-num">04</div><span class="os-node"></span>
+          <div class="os-en">Install</div>
+          <div class="os-jp">運送・組立設置</div>
+          <p class="os-desc">安全・確実な運送と丁寧な組立・設置まで一貫して対応。完成後すぐにご利用いただけます。</p>
+        </div>
       </div>
     </div>
-    <p class="onestop-lead"><b>内装だけの会社では、ありません。</b>デザイン・内装工事・造作家具・運送組立設置のすべてを、窓口ひとつで一社完結。複数業者を手配・調整する手間なく、責任の所在もひとつです。</p>
-    <div class="pipeline" aria-label="ワンストップの流れ">
-      <div class="pstage">
-        <span class="pen">Design</span>
-        <span class="pjp">デザイン</span>
-        <span class="pnote">nicomade（グループ）と連携</span>
-      </div>
-      <span class="parrow">→</span>
-      <div class="pstage">
-        <span class="pen">Interior</span>
-        <span class="pjp">内装工事</span>
-      </div>
-      <span class="parrow">→</span>
-      <div class="pstage">
-        <span class="pen">Furniture</span>
-        <span class="pjp">造作家具製造</span>
-      </div>
-      <span class="parrow">→</span>
-      <div class="pstage">
-        <span class="pen">Install</span>
-        <span class="pjp">運送・組立設置</span>
-      </div>
-    </div>
-    <div class="cards">
-      <article class="card" style="--cimg:url('images/service-01-build.png')">
-        <div class="ov">
-          <div class="no">01</div>
-          <h3>内装工事</h3>
-          <p>解体・造作から仕上げまで、確かな施工で理想の空間をかたちに。</p>
-          <div class="rule"></div>
+    <div class="os-cards">
+      <article class="os-card" style="--cimg:url('images/hero.png');--cpos:58% center">
+        <div class="os-cov">
+          <div class="os-cnum">01</div>
+          <div class="os-cjp">デザイン・設計</div>
+          <div class="os-cen">Design</div>
         </div>
       </article>
-      <article class="card" style="--cimg:url('images/service-02-furniture.png')">
-        <div class="ov">
-          <div class="no">02</div>
-          <h3>造作家具製造</h3>
-          <p>空間に合わせた造作家具・建具を、製造から設置まで一貫で。</p>
-          <div class="rule"></div>
+      <article class="os-card" style="--cimg:url('images/service-01-build.png')">
+        <div class="os-cov">
+          <div class="os-cnum">02</div>
+          <div class="os-cjp">内装工事</div>
+          <div class="os-cen">Interior</div>
         </div>
       </article>
-      <article class="card" style="--cimg:url('images/service-03-transport.png');--cpos:74% center">
-        <div class="ov">
-          <div class="no">03</div>
-          <h3>運送・組立設置</h3>
-          <p>什器・家具の配送から搬入・組み立て・設置まで、安全・確実・丁寧に。</p>
-          <div class="rule"></div>
+      <article class="os-card" style="--cimg:url('images/service-02-furniture.png')">
+        <div class="os-cov">
+          <div class="os-cnum">03</div>
+          <div class="os-cjp">造作家具製造</div>
+          <div class="os-cen">Furniture</div>
+        </div>
+      </article>
+      <article class="os-card" style="--cimg:url('images/service-03-transport.png');--cpos:74% center">
+        <div class="os-cov">
+          <div class="os-cnum">04</div>
+          <div class="os-cjp">運送・組立設置</div>
+          <div class="os-cen">Install</div>
         </div>
       </article>
     </div>
-    <div class="more" style="margin-top:44px;text-align:center">
-      <p style="font-family:'Noto Sans JP',sans-serif;font-size:13px;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:16px">施工・組み立てのご相談はコチラ</p>
-      <a class="btn-fill" href="tro-contact.html">お問い合わせ</a>
+    <div class="os-bar">
+      <p class="os-bar-l">設計・デザインのご相談はグループ会社「ニコパース」へ</p>
+      <a class="os-bar-btn" href="https://nicomade.net" target="_blank" rel="noopener">ニコパースを見る <span class="ar">→</span></a>
+      <p class="os-bar-r">CGパース制作・内装デザイン・設計のご相談は<br>デザイン設計ブランド「ニコパース」にて承っております。</p>
     </div>
   </div>
 </section>
