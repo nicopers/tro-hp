@@ -230,21 +230,21 @@
     .p-rule{width:30px!important;transition:none}}
 
   /* ===== craft intro ===== */
-  .craft-sec{padding-top:56px;padding-bottom:92px;background:#fcfcfa}
+  .craft-sec{padding-top:56px;padding-bottom:92px;background:var(--dark)}
   .craft{position:relative;overflow:hidden;display:grid;grid-template-columns:0.78fr 1.22fr;gap:0;align-items:center;min-height:360px}
-  .craft .wm{position:absolute;left:7%;top:50%;transform:translateY(-50%);width:min(540px,48%);height:auto;opacity:0;z-index:0;pointer-events:none;transition:opacity 1.6s ease .25s}
+  .craft .wm{position:absolute;left:7%;top:50%;transform:translateY(-50%);width:min(540px,48%);height:auto;opacity:0;z-index:0;pointer-events:none;transition:opacity 1.6s ease .25s;filter:brightness(0) invert(1)}
   .craft .draft{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
   .craft .draft line{stroke:rgba(194,175,145,.55);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.9s cubic-bezier(.6,.02,.2,1)}
   .craft .draft line:nth-of-type(2){transition-delay:.22s}
   .craft .draft line:nth-of-type(3){transition-delay:.44s}
   .craft .draft line:nth-of-type(4){transition-delay:.66s}
   .craft-sec.in .draft line{stroke-dashoffset:0}
-  .craft-sec.in .wm{opacity:.22}
+  .craft-sec.in .wm{opacity:.12}
   .craft .lede{position:relative;z-index:1;padding:60px 48px 60px 9%}
-  .craft .en-line{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:24px;letter-spacing:.16em;color:var(--ink-soft);margin-bottom:18px}
-  .craft h2{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:clamp(26px,3.1vw,38px);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display);white-space:nowrap}
-  .craft .body{position:relative;z-index:1;border-left:1px solid var(--line);padding-left:30px;
-    font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;color:#3c3a35;font-weight:500;font-size:15px;letter-spacing:.02em;line-height:2}
+  .craft .en-line{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:24px;letter-spacing:.16em;color:rgba(246,245,241,.68);margin-bottom:18px}
+  .craft h2{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:clamp(26px,3.1vw,38px);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display);white-space:nowrap;color:var(--cream)}
+  .craft .body{position:relative;z-index:1;border-left:1px solid rgba(246,245,241,.2);padding-left:30px;
+    font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;color:rgba(246,245,241,.85);font-weight:500;font-size:15px;letter-spacing:.02em;line-height:2}
   .craft .body p{white-space:nowrap}
   .craft .body p+p{margin-top:16px}
 
