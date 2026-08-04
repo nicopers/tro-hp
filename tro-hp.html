@@ -262,6 +262,23 @@
   .card p{font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:1.9;color:rgba(255,255,255,.85)}
   .card .rule{width:34px;height:1px;background:rgba(255,255,255,.6);margin-top:18px;transition:width .35s}
   .card:hover .rule{width:60px}
+  /* one-stop lead + pipeline */
+  .onestop-lead{font-family:"Noto Sans JP",sans-serif;font-size:14.5px;line-height:2;letter-spacing:.03em;color:var(--ink-soft);margin-top:16px;max-width:660px}
+  .onestop-lead b{color:var(--ink);font-weight:600}
+  .pipeline{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;gap:8px;margin:36px 0 6px;padding:30px 22px;background:var(--paper);border:1px solid var(--line);border-radius:4px}
+  .pstage{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;flex:1 1 130px;min-width:112px;padding:2px 6px}
+  .pstage .pen{font-family:"Cormorant Garamond",Georgia,serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);margin-bottom:9px}
+  .pstage .pjp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:17px;font-weight:600;letter-spacing:.05em;color:var(--ink);white-space:nowrap}
+  .pstage .pnote{font-family:"Noto Sans JP",sans-serif;font-size:10.5px;letter-spacing:.02em;color:var(--mute);margin-top:8px;line-height:1.5}
+  .parrow{align-self:center;color:var(--sand);font-size:15px;flex:0 0 auto}
+  @media (max-width:640px){
+    .pipeline{flex-direction:column;align-items:stretch;gap:0;padding:24px 20px}
+    .pstage{flex:none;padding:13px 0}
+    .parrow{transform:rotate(90deg);margin:2px auto}
+  }
+  /* works capability tag */
+  .work{text-align:center}
+  .work .wtag{display:inline-block;font-family:"Noto Sans JP",sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--ink-soft);border:1px solid var(--line);background:var(--paper);border-radius:2px;padding:5px 13px;margin-bottom:14px}
 
   /* ===== works ===== */
   .works{background:var(--ground)}
@@ -420,7 +437,7 @@
     <span class="vlabel">Tokyo Renovation Office</span>
     <p class="tag">内装施工・運送</p>
     <h1>圧倒的に、<br>信頼される施工を。</h1>
-    <p class="sub mincho">デザインも施工も、ワンチームで叶える。</p>
+    <p class="sub mincho">デザインから内装工事・造作家具・運送組立設置まで、<br>窓口ひとつで。</p>
     <div class="cta-row"><a class="btn-fill" href="tro-contact.html">お問い合わせ</a></div>
     <div class="scroll">Scroll</div>
   </div>
@@ -441,8 +458,8 @@
       <h2>美しく、確かに。</h2>
     </div>
     <div class="body">
-      <p>造作・施工・運送までを一貫して手がけ、<br>素材・納まり・品質にこだわり続けます。<br>お客様の「理想の空間」を図面と現場で確実にかたちに。</p>
-      <p>設計・製作・施工・運送までワンストップで対応することで、<br>美しさと使いやすさを両立した空間をお届けします。</p>
+      <p>内装工事・造作家具・運送組立設置までを一貫して手がけ、<br>素材・納まり・品質にこだわり続けます。<br>お客様の「理想の空間」を図面と現場で確実にかたちに。</p>
+      <p>デザインから製作・施工・組立設置までワンストップで対応することで、<br>美しさと使いやすさを両立した空間をお届けします。</p>
     </div>
   </div>
 </section>
@@ -451,30 +468,56 @@
 <section class="sec reveal" id="service" style="padding-top:34px;padding-bottom:24px">
   <div class="sec-inner">
     <div class="head-row">
-      <div><h2 class="jp">サービス内容</h2></div>
+      <div>
+        <p class="kicker">One-Stop Service</p>
+        <h2 class="jp">デザインから、組み立て・設置まで。</h2>
+      </div>
+    </div>
+    <p class="onestop-lead"><b>内装だけの会社では、ありません。</b>デザイン・内装工事・造作家具・運送組立設置のすべてを、窓口ひとつで一社完結。複数業者を手配・調整する手間なく、責任の所在もひとつです。</p>
+    <div class="pipeline" aria-label="ワンストップの流れ">
+      <div class="pstage">
+        <span class="pen">Design</span>
+        <span class="pjp">デザイン</span>
+        <span class="pnote">nicomade（グループ）と連携</span>
+      </div>
+      <span class="parrow">→</span>
+      <div class="pstage">
+        <span class="pen">Interior</span>
+        <span class="pjp">内装工事</span>
+      </div>
+      <span class="parrow">→</span>
+      <div class="pstage">
+        <span class="pen">Furniture</span>
+        <span class="pjp">造作家具製造</span>
+      </div>
+      <span class="parrow">→</span>
+      <div class="pstage">
+        <span class="pen">Install</span>
+        <span class="pjp">運送・組立設置</span>
+      </div>
     </div>
     <div class="cards">
       <article class="card" style="--cimg:url('images/service-01-build.png')">
         <div class="ov">
           <div class="no">01</div>
-          <h3>建築施工</h3>
-          <p>内装の造作から設計・施工までワンストップで対応します。</p>
+          <h3>内装工事</h3>
+          <p>解体・造作から仕上げまで、確かな施工で理想の空間をかたちに。</p>
           <div class="rule"></div>
         </div>
       </article>
       <article class="card" style="--cimg:url('images/service-02-furniture.png')">
         <div class="ov">
           <div class="no">02</div>
-          <h3>造作家具</h3>
-          <p>空間に合わせた造作家具・建具で、機能性とデザイン性を両立。</p>
+          <h3>造作家具製造</h3>
+          <p>空間に合わせた造作家具・建具を、製造から設置まで一貫で。</p>
           <div class="rule"></div>
         </div>
       </article>
       <article class="card" style="--cimg:url('images/service-03-transport.png');--cpos:74% center">
         <div class="ov">
           <div class="no">03</div>
-          <h3>運送施工</h3>
-          <p>什器・家具の配送から搬置・設置まで安全・確実・丁寧に対応します。</p>
+          <h3>運送・組立設置</h3>
+          <p>什器・家具の配送から搬入・組み立て・設置まで、安全・確実・丁寧に。</p>
           <div class="rule"></div>
         </div>
       </article>
@@ -495,15 +538,18 @@
     <div class="work-grid">
       <article class="work">
         <div class="img" style="background-image:url('images/work-office.jpg')"></div>
-        <p class="cap">オフィスのリノベーションで<br>明るく機能的な空間に</p>
+        <span class="wtag">内装工事</span>
+        <p class="cap">オフィスのフルリノベーション。<br>解体・造作から仕上げまで一貫で。</p>
       </article>
       <article class="work">
         <div class="img" style="background-image:url('images/work-store.jpg');background-position:60% center"></div>
-        <p class="cap">コンセプトを空間に落とし込んだ<br>店舗内装施工</p>
+        <span class="wtag">造作家具</span>
+        <p class="cap">店舗の世界観を体現する造作家具。<br>製造から搬入・設置まで。</p>
       </article>
       <article class="work">
         <div class="img" style="background-image:url('images/work-residence.png');background-position:60% center"></div>
-        <p class="cap">住まいの魅力を引き出す<br>マンションのフルリノベーション</p>
+        <span class="wtag">運送・組立設置</span>
+        <p class="cap">住まいの家具を、搬入・組立・設置まで。<br>運んで終わり、じゃない。</p>
       </article>
     </div>
   </div>
