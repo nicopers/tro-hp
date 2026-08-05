@@ -325,10 +325,8 @@
   /* ===== works ===== */
   .works{background:var(--ground)}
   .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
-  .work .img{position:relative;overflow:hidden;aspect-ratio:1/1;border-radius:3px;background-size:cover;background-position:center;background-color:var(--grey-soft);margin-bottom:22px;transition:transform .5s,filter .55s ease;filter:saturate(.9) brightness(1.02)}
-  .work .img::after{content:"";position:absolute;inset:0;background:rgba(246,245,241,.24);transition:opacity .55s ease}
-  .work:hover .img{transform:scale(1.015);filter:none}
-  .work:hover .img::after{opacity:0}
+  .work .img{position:relative;overflow:hidden;aspect-ratio:1/1;border-radius:3px;background-size:cover;background-position:center;background-color:var(--grey-soft);margin-bottom:22px;transition:transform .5s}
+  .work:hover .img{transform:scale(1.015)}
   .work .cap{text-align:center;font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:1.95;letter-spacing:.04em;color:var(--ink-soft)}
   .works .more{margin-top:54px;text-align:center}
   .cta-band{position:relative;overflow:hidden;background:var(--dark);padding:84px 6vw;text-align:center}
