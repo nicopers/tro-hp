@@ -295,9 +295,9 @@
   #service.in .os-steps .os-step:nth-child(4),#service.in .os-cards .os-card:nth-child(4){transition-delay:.3s}
   .os-bar{width:100vw;margin-left:calc(50% - 50vw);margin-top:52px;padding:30px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .os-bar-in{max-width:1320px;margin:0 auto;padding:0 6vw;display:grid;grid-template-columns:1fr auto 1fr;gap:36px;align-items:center}
-  .os-bar-l{font-family:"Noto Sans JP",sans-serif;font-size:15px;letter-spacing:.02em;color:var(--ink);font-weight:600;padding-left:18px;border-left:2px solid var(--sand)}
-  .os-bar-btn{justify-self:center;background:var(--dark);border:1px solid var(--dark);padding:15px 36px;font-family:"Noto Sans JP",sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--cream);white-space:nowrap;transition:.3s;border-radius:12px}
-  .os-bar-btn:hover{background:var(--dark-2);border-color:var(--dark-2)}
+  .os-bar-l{font-family:"Noto Sans JP",sans-serif;font-size:15px;letter-spacing:.02em;color:var(--ink);font-weight:600}
+  .os-bar-btn{justify-self:center;background:transparent;border:1px solid var(--ink);padding:15px 36px;font-family:"Noto Sans JP",sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--ink);white-space:nowrap;transition:.3s;border-radius:12px}
+  .os-bar-btn:hover{background:var(--dark);border-color:var(--dark);color:var(--cream)}
   .os-bar-btn .ar{color:var(--sand);margin-left:12px;display:inline-block;transition:.3s}
   .os-bar-btn:hover .ar{color:var(--cream);transform:translateX(4px)}
   .os-bar-r{font-family:"Noto Sans JP",sans-serif;font-size:12px;line-height:1.85;letter-spacing:.01em;color:var(--ink-soft);text-align:right}
@@ -340,8 +340,8 @@
   .line-dl:hover{background:var(--cream);border-color:var(--cream);opacity:.92}
   .line-dl span{position:relative;z-index:1}
   .line-dl::after{content:"";position:absolute;top:-30%;left:-60%;width:55%;height:160%;pointer-events:none;z-index:0;
-    background:linear-gradient(100deg,transparent 22%,rgba(255,255,255,.55) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,.55) 60%,transparent 78%);
-    transform:skewX(-24deg);animation:sheen 3s ease-in-out 1.6s infinite}
+    background:linear-gradient(100deg,transparent 22%,rgba(194,175,145,.3) 40%,rgba(194,175,145,.8) 50%,rgba(194,175,145,.3) 60%,transparent 78%);
+    transform:skewX(-24deg);animation:sheen 2.6s ease-in-out 1.2s infinite}
   @keyframes sheen{0%{left:-60%}30%,100%{left:150%}}
   .cta-note{margin-top:18px;font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.72);text-shadow:0 1px 12px rgba(0,0,0,.4)}
 
@@ -592,17 +592,14 @@ SERVICE</span>
     <div class="work-grid">
       <article class="work">
         <div class="img" style="background-image:url('images/work-office.jpg')"></div>
-        <span class="wtag">内装工事</span>
         <p class="cap">オフィスのフルリノベーション。<br>解体・造作から仕上げまで一貫で。</p>
       </article>
       <article class="work">
         <div class="img" style="background-image:url('images/work-store.jpg');background-position:60% center"></div>
-        <span class="wtag">造作家具</span>
         <p class="cap">店舗の世界観を体現する造作家具。<br>製造から搬入・設置まで。</p>
       </article>
       <article class="work">
         <div class="img" style="background-image:url('images/work-residence.png');background-position:60% center"></div>
-        <span class="wtag">運送・組立設置</span>
         <p class="cap">住まいの家具を、搬入・組立・設置まで。<br>運んで終わり、じゃない。</p>
       </article>
     </div>
