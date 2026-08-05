@@ -142,7 +142,7 @@
   .hero .cta-row{position:relative;z-index:2;animation:heroUp .9s ease 2.11s both}
   @keyframes heroUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
   .hero .vlabel{position:absolute;left:22px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;
-    font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:15px;letter-spacing:.2em;color:rgba(244,241,234,.72)}
+    font-family:"Jost",sans-serif;font-weight:300;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:rgba(244,241,234,.72)}
   .hero .tag{font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:18px;letter-spacing:.1em;margin-bottom:24px;color:rgba(244,241,234,.92);text-shadow:0 1px 16px rgba(0,0,0,.3)}
   .hero h1{font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(36px,4.6vw,60px);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display);text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.45),0 1px 3px rgba(0,0,0,.25)}
   .hero .sub{margin-top:26px;font-family:"Noto Sans JP",sans-serif;font-size:16px;letter-spacing:.1em;line-height:1.8;color:rgba(244,241,234,.9);text-shadow:0 1px 16px rgba(0,0,0,.3)}
@@ -176,7 +176,7 @@
   /* 全セクション生成りで統一・仕切り線なし（余白でシームレスに区切る） */
   #service{background:var(--ground)}
   #flow{background:#fcfcfa}
-  .kicker{font-family:"Cormorant Garamond",Georgia,serif;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
+  .kicker{font-family:"Jost",sans-serif;font-weight:400;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
   .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
   h2.jp{font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;font-size:var(--fs-h3);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display)}
   .btn-line{color:var(--ink);letter-spacing:.08em;font-size:14px}
@@ -241,7 +241,7 @@
   .craft-sec.in .draft line{stroke-dashoffset:0}
   .craft-sec.in .wm{opacity:.22}
   .craft .lede{position:relative;z-index:1;padding:60px 48px 60px 9%}
-  .craft .en-line{font-family:"Playfair Display","Didot","Bodoni MT",Georgia,serif;font-style:italic;font-weight:500;font-size:26px;letter-spacing:.2em;color:var(--sand);margin-bottom:18px}
+  .craft .en-line{font-family:"Jost",sans-serif;font-weight:400;font-size:18px;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:18px}
   .craft h2{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:clamp(26px,3.1vw,38px);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display);white-space:nowrap}
   .craft .body{position:relative;z-index:1;border-left:1px solid var(--line);padding-left:30px;
     font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;color:#3c3a35;font-weight:500;font-size:15px;letter-spacing:.02em;line-height:2}
@@ -257,7 +257,7 @@
   .card .ov{position:relative;z-index:2;padding:42px 36px 38px}
   #service.in .cards .card:hover{transform:translateY(-6px);box-shadow:0 26px 54px -24px rgba(0,0,0,.42)}
   #service.in .cards .card:hover::before{transform:scale(1.06)}
-  .card .no{font-family:"Cormorant Garamond",Georgia,serif;font-size:40px;letter-spacing:.04em;color:#fff}
+  .card .no{font-family:"Jost",sans-serif;font-weight:300;font-size:36px;letter-spacing:.08em;color:#fff}
   .card h3{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:24px;font-weight:500;letter-spacing:var(--ls-mincho);line-height:1.4;margin:6px 0 14px}
   .card p{font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:1.9;color:rgba(255,255,255,.85)}
   .card .rule{width:34px;height:1px;background:rgba(255,255,255,.6);margin-top:18px;transition:width .35s}
@@ -265,7 +265,7 @@
   /* ===== ONE-STOP SERVICE (redesign) ===== */
   #service.onestop{position:relative;overflow:hidden;background:#e9e8e4}
   .os-wm{position:absolute;top:-18px;left:-6px;z-index:0;pointer-events:none;white-space:pre-line;
-    font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:166px;line-height:.9;letter-spacing:.01em;text-transform:uppercase;color:#dedcd6}
+    font-family:"Jost",sans-serif;font-weight:300;font-size:150px;line-height:.95;letter-spacing:.04em;text-transform:uppercase;color:#dedcd6}
   #service .sec-inner{position:relative;z-index:1}
   .os-top{display:grid;grid-template-columns:0.92fr 1.45fr;gap:64px;align-items:start;padding-top:18px}
   .os-head .kicker{margin-bottom:18px;color:var(--ink)}
@@ -274,9 +274,9 @@
   .os-steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding-top:6px}
   .os-steps::before{content:"";position:absolute;left:2px;right:2px;top:58px;height:1px;background:#d3d1ca;z-index:0}
   .os-step{position:relative;z-index:1}
-  .os-num{font-family:"Cormorant Garamond",Georgia,serif;font-size:40px;line-height:1;color:var(--ink)}
+  .os-num{font-family:"Jost",sans-serif;font-weight:300;font-size:36px;letter-spacing:.06em;line-height:1;color:var(--ink)}
   .os-node{position:absolute;top:53px;left:1px;width:9px;height:9px;border-radius:50%;background:var(--sand);box-shadow:0 0 0 5px #e9e8e4}
-  .os-en{font-family:"Cormorant Garamond",Georgia,serif;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-top:34px;margin-bottom:11px}
+  .os-en{font-family:"Jost",sans-serif;font-weight:400;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin-top:34px;margin-bottom:11px}
   .os-jp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:18px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin-bottom:13px;white-space:nowrap}
   .os-desc{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;line-height:1.95;letter-spacing:.01em;color:var(--ink-soft)}
   .os-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:54px}
@@ -285,9 +285,9 @@
   .os-card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.12) 42%,rgba(0,0,0,.82) 100%)}
   #service.in .os-card:hover::before{transform:scale(1.06)}
   .os-cov{position:relative;z-index:2;padding:0 26px 30px}
-  .os-cnum{font-family:"Cormorant Garamond",Georgia,serif;font-size:34px;line-height:1;color:#fff}
+  .os-cnum{font-family:"Jost",sans-serif;font-weight:300;font-size:30px;letter-spacing:.06em;line-height:1;color:#fff}
   .os-cjp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:19px;font-weight:600;letter-spacing:.04em;margin:12px 0 7px}
-  .os-cen{font-family:"Cormorant Garamond",Georgia,serif;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+  .os-cen{font-family:"Jost",sans-serif;font-weight:400;font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.72)}
   .os-steps .os-step,.os-cards .os-card{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
   #service.in .os-steps .os-step,#service.in .os-cards .os-card{opacity:1;transform:none}
   #service.in .os-steps .os-step:nth-child(2),#service.in .os-cards .os-card:nth-child(2){transition-delay:.1s}
@@ -349,7 +349,7 @@
   .flow-wrap{margin-top:54px}
   .flow{display:flex;align-items:flex-start;justify-content:center;gap:4px}
   .flow-step{flex:1 1 0;max-width:184px;text-align:center;display:flex;flex-direction:column;align-items:center}
-  .fnum{font-family:"Jost",sans-serif;font-weight:400;font-size:14px;letter-spacing:.26em;color:var(--sand);margin-bottom:12px}
+  .fnum{font-family:"Jost",sans-serif;font-weight:400;font-size:14px;letter-spacing:.32em;color:var(--sand);margin-bottom:12px}
   .flow-step h3{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:16px;font-weight:600;letter-spacing:.06em;color:var(--ink);margin-bottom:20px;white-space:nowrap}
   .ficon{width:46px;height:46px;margin-bottom:20px;color:var(--ink)}
   .ficon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -364,7 +364,7 @@
   .faq-item{border-bottom:1px solid var(--line)}
   .faq-q{width:100%;background:none;border:0;cursor:pointer;text-align:left;display:flex;align-items:baseline;gap:24px;
     padding:20px 6px;color:var(--ink)}
-  .faq-q .qm{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:26px;line-height:1;color:var(--sand);flex:none;width:1.1em}
+  .faq-q .qm{font-family:"Jost",sans-serif;font-weight:400;font-size:24px;line-height:1;color:var(--sand);flex:none;width:1.1em}
   .faq-q .tx{flex:1;font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;font-size:19px;letter-spacing:.04em;line-height:1.5;color:var(--ink);transition:color .3s}
   .faq-item:hover .faq-q .tx{color:var(--ink-soft)}
   .faq-q .pm{flex:none;align-self:center;position:relative;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;font-size:0;color:transparent;transition:transform .4s ease,border-color .4s ease}
@@ -388,7 +388,7 @@
   .person .p-photo[data-ph]::after{content:attr(data-ph);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.14em;color:rgba(244,241,234,.4);border:1px dashed rgba(244,241,234,.3);padding:5px 12px}
   .p-role{font-size:11.5px;letter-spacing:.1em;color:var(--mute)}
   .p-name{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:19px;font-weight:600;letter-spacing:.12em;color:var(--ink);margin-top:5px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-  .p-name span{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:12.5px;letter-spacing:.06em;color:var(--sand)}
+  .p-name span{font-family:"Jost",sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand)}
   .p-rule{width:30px;height:1px;background:var(--sand);margin:15px 0}
   .p-bio{font-size:12.5px;line-height:1.95;color:var(--ink)}
   .p-link{display:inline-block;margin-top:14px;font-family:"Noto Sans JP",sans-serif;font-size:12.5px;letter-spacing:.04em;color:var(--ink);border-bottom:1px solid var(--sand);padding-bottom:3px;transition:color .25s}
@@ -406,7 +406,7 @@
   .foot-cell .more{margin-top:24px}
   .contact-cell .btn-fill{width:100%;text-align:center;padding:18px}
   .contact-cell .tel{margin-top:26px;font-size:12px;color:var(--ink-soft)}
-  .contact-cell .tel b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;letter-spacing:.05em;color:var(--ink);margin-top:6px}
+  .contact-cell .tel b{display:block;font-family:"Jost",sans-serif;font-weight:400;font-size:24px;letter-spacing:.08em;color:var(--ink);margin-top:6px}
   .contact-cell .tel span{font-size:11px;color:var(--mute)}
 
   /* ===== footer bottom ===== */
