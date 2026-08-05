@@ -10,7 +10,7 @@
 <style>
   :root{
     --ground:#f6f5f1; --paper:#fdfcfa; --ink:#2a302e; --ink-soft:#5a615e; --mute:#8b918d;
-    --line:#e4e1da; --dark:#1e1d1b; --dark-2:#33312d; --sand:#c2af91; --cream:#f6f5f1;
+    --line:#e4e1da; --dark:#1e1d1b; --dark-2:#33312d; --sand:#8b918d; --cream:#f6f5f1;
     --field:#fbfaf7; --field-line:#d9d5cc; --ls-mincho:.04em; --lh-display:1.2;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -68,7 +68,7 @@
     width:100%;background:var(--field);border:1px solid var(--field-line);border-radius:10px;
     padding:15px 16px;font-family:inherit;font-size:15px;color:var(--ink);line-height:1.7;transition:border-color .25s,box-shadow .25s}
   .field input::placeholder,.field textarea::placeholder{color:#b7b3a9}
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--sand);box-shadow:0 0 0 3px rgba(194,175,145,.18)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--sand);box-shadow:0 0 0 3px rgba(139,145,141,.18)}
   .field textarea{min-height:150px;resize:vertical}
 
   /* radio type */
@@ -83,7 +83,7 @@
   .types input:checked ~ .dot{border-color:var(--sand)}
   .types input:checked ~ .dot::after{transform:scale(1)}
   .types input:checked + .dot{border-color:var(--sand)}
-  .types label:has(input:checked){border-color:var(--sand);background:#f3efe6}
+  .types label:has(input:checked){border-color:var(--sand);background:#ecebe7}
 
   /* privacy */
   .privacy{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:8px 0 26px;

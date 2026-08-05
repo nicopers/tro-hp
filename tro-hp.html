@@ -164,7 +164,7 @@
     animation:introLift .95s cubic-bezier(.76,0,.24,1) 1.35s forwards}
   .intro-in{display:flex;flex-direction:column;align-items:center;gap:22px}
   .intro-logo{height:64px;width:auto;opacity:0;transform:translateY(9px);animation:introLogo .9s ease .2s both}
-  .intro-line{width:0;height:1px;background:var(--sand);animation:introLine 1s cubic-bezier(.6,.02,.2,1) .5s forwards}
+  .intro-line{width:0;height:1px;background:var(--mute);animation:introLine 1s cubic-bezier(.6,.02,.2,1) .5s forwards}
   @keyframes introLogo{to{opacity:1;transform:none}}
   @keyframes introLine{to{width:132px}}
   @keyframes introLift{to{transform:translateY(-101%);visibility:hidden}}
@@ -176,11 +176,11 @@
   /* 全セクション生成りで統一・仕切り線なし（余白でシームレスに区切る） */
   #service{background:var(--ground)}
   #flow{background:#fcfcfa}
-  .kicker{font-family:"Jost",sans-serif;font-weight:400;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
+  .kicker{font-family:"Jost",sans-serif;font-weight:400;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
   .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
   h2.jp{font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;font-size:var(--fs-h3);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display)}
   .btn-line{color:var(--ink);letter-spacing:.08em;font-size:14px}
-  .btn-line .ar{color:var(--sand);margin-left:12px;transition:.3s;display:inline-block}
+  .btn-line .ar{color:var(--mute);margin-left:12px;transition:.3s;display:inline-block}
   .btn-line:hover .ar{transform:translateX(6px)}
   /* underlined text link cta */
   .link-cta{max-width:320px;margin:0 auto}
@@ -188,7 +188,7 @@
   .link-cta a{display:flex;justify-content:space-between;align-items:center;gap:20px;
     border-bottom:1px solid var(--ink);padding:6px 2px 18px;
     font-family:"Noto Sans JP",sans-serif;font-size:15px;letter-spacing:.2em;color:var(--ink)}
-  .link-cta a .ar{letter-spacing:0;font-size:17px;color:var(--sand);transition:transform .35s ease}
+  .link-cta a .ar{letter-spacing:0;font-size:17px;color:var(--mute);transition:transform .35s ease}
   .link-cta a:hover .ar{transform:translateX(7px)}
 
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
@@ -232,16 +232,16 @@
   /* ===== craft intro ===== */
   .craft-sec{padding-top:56px;padding-bottom:92px;background:#fcfcfa}
   .craft{position:relative;overflow:hidden;display:grid;grid-template-columns:0.78fr 1.22fr;gap:0;align-items:center;min-height:360px}
-  .craft .wm{position:absolute;left:7%;top:50%;transform:translateY(-50%);width:min(540px,48%);height:auto;opacity:0;z-index:0;pointer-events:none;transition:opacity 1.6s ease .25s}
+  .craft .wm{position:absolute;left:7%;top:50%;transform:translateY(-50%);width:min(540px,48%);height:auto;opacity:0;z-index:0;pointer-events:none;transition:opacity 1.6s ease .25s;filter:grayscale(1)}
   .craft .draft{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-  .craft .draft line{stroke:rgba(194,175,145,.55);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.9s cubic-bezier(.6,.02,.2,1)}
+  .craft .draft line{stroke:rgba(139,145,141,.5);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.9s cubic-bezier(.6,.02,.2,1)}
   .craft .draft line:nth-of-type(2){transition-delay:.22s}
   .craft .draft line:nth-of-type(3){transition-delay:.44s}
   .craft .draft line:nth-of-type(4){transition-delay:.66s}
   .craft-sec.in .draft line{stroke-dashoffset:0}
   .craft-sec.in .wm{opacity:.22}
   .craft .lede{position:relative;z-index:1;padding:60px 48px 60px 9%}
-  .craft .en-line{font-family:"Jost",sans-serif;font-weight:400;font-size:18px;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:18px}
+  .craft .en-line{font-family:"Jost",sans-serif;font-weight:400;font-size:18px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
   .craft h2{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:clamp(26px,3.1vw,38px);font-weight:400;letter-spacing:var(--ls-mincho);line-height:var(--lh-display);white-space:nowrap}
   .craft .body{position:relative;z-index:1;border-left:1px solid var(--line);padding-left:30px;
     font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif;color:#3c3a35;font-weight:500;font-size:15px;letter-spacing:.02em;line-height:2}
@@ -275,7 +275,7 @@
   .os-steps::before{content:"";position:absolute;left:2px;right:2px;top:58px;height:1px;background:#d3d1ca;z-index:0}
   .os-step{position:relative;z-index:1}
   .os-num{font-family:"Jost",sans-serif;font-weight:300;font-size:36px;letter-spacing:.06em;line-height:1;color:var(--ink)}
-  .os-node{position:absolute;top:53px;left:1px;width:9px;height:9px;border-radius:50%;background:var(--sand);box-shadow:0 0 0 5px #e9e8e4}
+  .os-node{position:absolute;top:53px;left:1px;width:9px;height:9px;border-radius:50%;background:var(--mute);box-shadow:0 0 0 5px #e9e8e4}
   .os-en{font-family:"Jost",sans-serif;font-weight:400;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin-top:34px;margin-bottom:11px}
   .os-jp{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:18px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin-bottom:13px;white-space:nowrap}
   .os-desc{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;line-height:1.95;letter-spacing:.01em;color:var(--ink-soft)}
@@ -374,8 +374,8 @@
   .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;top:50%;left:50%;background:var(--ink-soft);transition:opacity .35s}
   .faq-q .pm::before{width:12px;height:1px;transform:translate(-50%,-50%)}
   .faq-q .pm::after{width:1px;height:12px;transform:translate(-50%,-50%)}
-  .faq-item:hover .faq-q .pm{border-color:var(--sand)}
-  .faq-item.open .faq-q .pm{transform:rotate(180deg);border-color:var(--sand)}
+  .faq-item:hover .faq-q .pm{border-color:var(--mute)}
+  .faq-item.open .faq-q .pm{transform:rotate(180deg);border-color:var(--mute)}
   .faq-item.open .faq-q .pm::after{opacity:0}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
   .faq-a .inner{padding:0 60px 24px calc(1.1em + 30px);font-family:"Noto Sans JP",sans-serif;font-size:14.5px;color:var(--ink-soft);line-height:2}
@@ -391,18 +391,18 @@
   .person .p-photo[data-ph]::after{content:attr(data-ph);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.14em;color:rgba(244,241,234,.4);border:1px dashed rgba(244,241,234,.3);padding:5px 12px}
   .p-role{font-size:11.5px;letter-spacing:.1em;color:var(--mute)}
   .p-name{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:19px;font-weight:600;letter-spacing:.12em;color:var(--ink);margin-top:5px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-  .p-name span{font-family:"Jost",sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand)}
-  .p-rule{width:30px;height:1px;background:var(--sand);margin:15px 0}
+  .p-name span{font-family:"Jost",sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+  .p-rule{width:30px;height:1px;background:var(--mute);margin:15px 0}
   .p-bio{font-size:12.5px;line-height:1.95;color:var(--ink)}
-  .p-link{display:inline-block;margin-top:14px;font-family:"Noto Sans JP",sans-serif;font-size:12.5px;letter-spacing:.04em;color:var(--ink);border-bottom:1px solid var(--sand);padding-bottom:3px;transition:color .25s}
+  .p-link{display:inline-block;margin-top:14px;font-family:"Noto Sans JP",sans-serif;font-size:12.5px;letter-spacing:.04em;color:var(--ink);border-bottom:1px solid var(--mute);padding-bottom:3px;transition:color .25s}
   .p-link:hover{color:var(--ink-soft)}
-  .p-link .ar{color:var(--sand);margin-right:4px}
+  .p-link .ar{color:var(--mute);margin-right:4px}
 
   /* ===== footer info ===== */
   .foot-info{background:var(--ground);padding:92px 6vw 78px}
   .foot-grid{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:80px}
   .foot-grid h3{font-family:"Zen Old Mincho","Yu Mincho",serif;font-size:19px;font-weight:600;letter-spacing:.14em;margin-bottom:22px;display:flex;align-items:baseline;gap:12px}
-  .foot-grid h3 .en{font-size:9.5px;color:var(--sand)}
+  .foot-grid h3 .en{font-size:9.5px;color:var(--mute)}
   .co-table{width:100%;border-collapse:collapse;font-size:13.5px;font-family:"Zen Old Mincho","Yu Mincho","Hiragino Mincho ProN",serif}
   .co-table th,.co-table td{text-align:left;padding:12px 6px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.8;letter-spacing:.02em}
   .co-table th{width:6.5em;font-weight:500;color:var(--mute);letter-spacing:.06em;font-size:12.5px}
