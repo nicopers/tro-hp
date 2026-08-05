@@ -359,7 +359,10 @@
   .fsep svg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.7}
 
   /* ===== faq ===== */
-  .faq{background:var(--ground)}
+  .faq{position:relative;background:var(--ground);overflow:hidden}
+  .faq::before{content:"";position:absolute;inset:-24px;z-index:0;background:url('images/faq-bg.jpg') center/cover;filter:blur(7px)}
+  .faq::after{content:"";position:absolute;inset:0;z-index:0;background:rgba(253,252,250,.72)}
+  .faq .sec-inner{position:relative;z-index:1}
   .faq-list{margin-top:44px;border-top:1px solid var(--line)}
   .faq-item{border-bottom:1px solid var(--line)}
   .faq-q{width:100%;background:none;border:0;cursor:pointer;text-align:left;display:flex;align-items:baseline;gap:24px;
