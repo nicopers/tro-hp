@@ -179,7 +179,7 @@
         <!-- 電話番号 -->
         <div class="field">
           <div class="lb">電話番号<span class="badge req">必須</span></div>
-          <input type="tel" name="fphone" placeholder="090-0000-0000" required>
+          <input type="tel" name="fphone" placeholder="例）090-1234-5678" required>
         </div>
         <!-- メール -->
         <div class="field">
@@ -191,6 +191,9 @@
           <div class="lb">お問い合わせ内容<span class="badge req">必須</span></div>
           <textarea name="fmessage" placeholder="ご相談内容・ご希望・お困りごとなど、わかる範囲でご記入ください。" required></textarea>
         </div>
+
+        <!-- スパム対策（人は入力しない欄） -->
+        <input type="text" name="website" style="position:absolute;left:-9999px;top:auto;opacity:0;height:0" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <!-- privacy -->
         <div class="privacy">
@@ -221,9 +224,6 @@
   </div>
 </section>
 
-<!-- hidden target for Google Form POST -->
-<iframe name="gform_target" id="gform_target" style="display:none" title=""></iframe>
-
 <footer>
   <div class="foot-bottom">
     <div class="fb-brand"><a href="tro-hp.html"><img src="images/logo-tro.png" alt="tro ― 東京リノベオフィス" class="logo-img fb-logo"></a></div>
@@ -237,29 +237,10 @@
 </footer>
 
 <script>
-  /* =========================================================================
-     Googleフォーム連携の設定 —— ★ここを実フォームの値に差し替えてください★
-     手順: Googleフォームを作成 → 送信 →「リンク」ではなくフォーム編集画面のHTML、
-     もしくは各項目の entry ID を控えてここに設定します。
-     ========================================================================= */
-  const GFORM = {
-    // 例: https://docs.google.com/forms/d/e/1FAIpQLSxxxxxxxx/formResponse
-    action: "https://docs.google.com/forms/d/e/【FORM_ID】/formResponse",
-    // 各フィールドの entry.XXXXXXX を設定
-    entry: {
-      ftype:    "entry.【種別】",
-      fname:    "entry.【お名前】",
-      fcompany: "entry.【会社名】",
-      fphone:   "entry.【電話番号】",
-      femail:   "entry.【メール】",
-      fmessage: "entry.【内容】"
-    }
-  };
-
+  /* 送信先: 同サーバーの contact.php（メールで rino.office.tk@gmail.com に届く） */
   const form = document.getElementById('troForm');
   const agree = document.getElementById('agree');
   const submitBtn = document.getElementById('submitBtn');
-  const target = document.getElementById('gform_target');
 
   agree.addEventListener('change', () => { submitBtn.disabled = !agree.checked; });
 
@@ -268,30 +249,22 @@
     if (!form.checkValidity()) { form.reportValidity(); return; }
     if (!agree.checked) return;
 
-    // Googleフォームが未設定なら、送信せずに警告（開発用ガード）
-    if (GFORM.action.indexOf('【') !== -1) {
-      alert('※ Googleフォームの設定が未完了です（送信先URL・entry IDを設定してください）。');
-      return;
-    }
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中…';
 
-    // 隠しフォームを組み立ててGoogleフォームへPOST
-    const gf = document.createElement('form');
-    gf.action = GFORM.action; gf.method = 'POST'; gf.target = 'gform_target';
-    const add = (name, val) => { const i=document.createElement('input'); i.type='hidden'; i.name=name; i.value=val; gf.appendChild(i); };
-    add(GFORM.entry.ftype,    (form.ftype.value||''));
-    add(GFORM.entry.fname,    form.fname.value);
-    add(GFORM.entry.fcompany, form.fcompany.value);
-    add(GFORM.entry.fphone,   form.fphone.value);
-    add(GFORM.entry.femail,   form.femail.value);
-    add(GFORM.entry.fmessage, form.fmessage.value);
-    document.body.appendChild(gf);
-    gf.submit();
-    document.body.removeChild(gf);
-
-    // サンクス表示（Googleの応答はCORSで読めないため送信直後に切替）
-    document.getElementById('formWrap').style.display='none';
-    const th=document.getElementById('thanks'); th.classList.add('show');
-    window.scrollTo({top:0,behavior:'smooth'});
+    fetch('contact.php', { method: 'POST', body: new FormData(form) })
+      .then((res) => res.json())
+      .then((j) => {
+        if (!j.ok) throw new Error('send failed');
+        document.getElementById('formWrap').style.display='none';
+        const th=document.getElementById('thanks'); th.classList.add('show');
+        window.scrollTo({top:0,behavior:'smooth'});
+      })
+      .catch(() => {
+        alert('送信に失敗しました。お手数ですが、時間をおいて再度お試しいただくか、お電話（090-7426-7489）にてご連絡ください。');
+        submitBtn.disabled = false;
+        submitBtn.textContent = '送信する';
+      });
   });
 
   document.querySelectorAll('header nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('header nav').classList.remove('show')));
